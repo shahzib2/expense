@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Tracker: A Simple Tool for Managing Daily Finances</title>
+    <link rel="stylesheet" href="expdesign.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Expense Tracker</h1>
+        <h4></h4><p>Tharun</p></h4>
+        
+        <!-- Form to Add Expenses -->
+        <div class="form-container">
+            <h2>Add Expense</h2>
+            <form id="expenseForm">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" required>
+                
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Education">Education</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Investments">Investments</option>
+                    <option value="Gifts">Gifts</option>
+                    <option value="Charity">Charity</option>
+                    <option value="Personal Care">Personal Care</option>
+                    <option value="Insurance">Insurance</option>
+                </select>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+
+        <!-- Display Expenses -->
+        <div class="expenses-container">
+            <h2>View Expenses</h2>
+            <table id="expenseTable">
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expenses will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Calculate Totals -->
+        <div class="totals-container">
+            <h2>Calculate Totals</h2>
+            <p>Total Expenses: <span id="totalAmount">0</span></p>
+        </div>
+    </div>
+
+    <script src="logicexp.js"></script>
+</body>
+</html>
